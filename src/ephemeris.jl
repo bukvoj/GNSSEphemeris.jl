@@ -43,7 +43,7 @@ Arguments:
 function getsvpos(
                 time::Real, 
                 toe::Number,
-                gpsweek::Int,
+                gpsweek::Number,
                 svclockbias::Real, svclockdrift::Real, svclockdriftrate::Real,
                 sqrtA::Real,
                 M₀::Real,
@@ -146,7 +146,7 @@ end
 function getsvpos(
     time::DateTime, 
     toe::Number,
-    gpsweek::Int,
+    gpsweek::Number,
     svclockbias::Real, svclockdrift::Real, svclockdriftrate::Real,
     sqrtA::Real,
     M₀::Real,
@@ -167,7 +167,7 @@ end
 function getsvpos(
     time::TimeDate, 
     toe::Number,
-    gpsweek::Int,
+    gpsweek::Number,
     svclockbias::Real, svclockdrift::Real, svclockdriftrate::Real,
     sqrtA::Real,
     M₀::Real,
