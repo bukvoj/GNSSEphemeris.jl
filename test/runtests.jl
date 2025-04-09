@@ -2,5 +2,7 @@ using GNSSEphemeris
 using Test
 
 @testset "GNSSEphemeris.jl" begin
-    # Write your tests here.
+    include("lineofsight.jl")
+    include("lookangles.jl")
+    include("svpos.jl")
 end
