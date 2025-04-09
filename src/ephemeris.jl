@@ -275,8 +275,3 @@ function extractnav(navdata::RinexContent, constellation::Char, svid::Int)
     end
 end
 
-function weeksecondstoutc(week::Number, tow::Number)
-    epoch = DateTime(1980,1,6)
-    weekseconds = week * 604800 + tow
-    return epoch + Dates.Second(weekseconds)
-end

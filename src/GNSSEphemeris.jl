@@ -4,6 +4,7 @@ module GNSSEphemeris
     using Geodesy
     using RinexRead
 
+    include("utils.jl")
     include("lineofsight.jl")
     include("lookangles.jl")
     include("ephemeris.jl")
