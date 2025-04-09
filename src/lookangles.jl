@@ -31,8 +31,8 @@ function lookangles(svpos::Vector{ECEF{T}}, recpos::ECEF; unit=:rad) where T <: 
     return az, el
 end
 
-lookangles(svpos::ECEF, recpos::LLA; datum=:wgs84, unit=:rad) = lookangles(svpos, ECEF(recpos, datum); unit=unit)
+lookangles(svpos::ECEF, recpos::LLA; datum=wgs84, unit=:rad) = lookangles(svpos, ECEF(recpos, datum); unit=unit)
 
-function lookangles(svpos::Vector{ECEF{T}}, recpos::LLA; unit=:rad)  where T <: Number 
-    return lookangles(svpos, ECEF(recpos, wgs84); unit=unit)
+function lookangles(svpos::Vector{ECEF{T}}, recpos::LLA; datum = wgs84, unit=:rad)  where T <: Number 
+    return lookangles(svpos, ECEF(recpos, datum); unit=unit)
 end

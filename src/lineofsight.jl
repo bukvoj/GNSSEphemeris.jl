@@ -10,6 +10,6 @@ function lineofsight(svpos::ECEF, recpos::ECEF)
     return los
 end
 
-function lineofsight(svpos::ECEF, recpos::LLA; datum=wgs84)
+function lineofsight(svpos::ECEF, recpos::LLA; datum = wgs84)
     return lineofsight(svpos, ECEF(recpos, datum))
 end
